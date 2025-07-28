@@ -1,0 +1,30 @@
+.rodape{
+    background: linear-gradient(to bottom, #3C59B5, #1A274F);
+    padding: 2em;
+    text-align: center;
+}
+
+.rodape__titulo,
+.rodape__sobre{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+}
+
+.rodape__titulo{
+    padding-bottom: 2em;
+}
+
+.redes{
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.rodape__sobre{
+    padding-top: 2em;
+    font-weight: 300;
+    font-size: 12px;
+}

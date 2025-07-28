@@ -1,0 +1,12 @@
+.contato{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    background-color: #00CFD5;
+    padding: 7px 10px;
+    border-radius: 10px;
+    color: #1A274F;
+    width: fit-content;
+}

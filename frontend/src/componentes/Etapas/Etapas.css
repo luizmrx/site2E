@@ -1,0 +1,16 @@
+.etapas{
+    background: linear-gradient(to bottom, #0F183E, #334479);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.etapas__titulo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}

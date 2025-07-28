@@ -1,0 +1,56 @@
+.principal{
+    background: linear-gradient(to bottom, #1A274F, #0F183E);
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    position: relative;
+    align-items: center;
+}
+
+.imagem-wrapper {
+  position: relative; /* para posicionar a luz e a img */
+  display: inline-block; /* para se ajustar ao tamanho da imagem */
+  width: 100%;
+}
+
+.imagem-wrapper img{
+    width: 100%;
+    position: relative;
+    z-index: 1; /* acima da luz */
+    display: block;
+}
+
+.luz__roxa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(ellipse, rgb(134, 123, 255) 0%, transparent 90%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.luz__verde {
+    position: absolute;
+    top: 70%;   /* ajuste para centralizar verticalmente */
+    left: 60%;  /* ajuste para centralizar horizontalmente */
+    transform: translate(-50%, -50%);
+    width: 200px;  /* tamanho da luz */
+    height: 200px; /* tamanho da luz */
+    background: linear-gradient(135deg, #00CFD5, #737373);
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.principal__paragrafo{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 13px;
+}

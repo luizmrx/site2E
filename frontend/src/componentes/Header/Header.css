@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.cabecalho{
+    background: linear-gradient(to bottom, #0F183E, #1A274F);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+}
+
+.cabecalho__opcoes{
+    display: flex;
+    align-items: center;
+    width: 45%;
+    justify-content: space-around;
+    position: relative;
+}
+
+.cabecalho__opcoes input{
+    display: none;
+}
+
+.contato{
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+    background-color: #00CFD5;
+    padding: 7px 10px;
+    border-radius: 10px;
+    color: #1A274F;
+}
+
+.cabecalho__links{
+    position: absolute;
+    top: 100%;
+    right: -4%;
+    background: linear-gradient(to bottom, #3D518E, #0F183E);
+    border-radius: 3px;
+    z-index: 1;
+    text-align: center;
+    display: none;
+}
+
+.cabecalho__item{
+    padding: 1.5em 3em;
+}
+
+.cabecalho__link{
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 15px;
+}
+
+.menu__hamburguer{
+    padding: 0.8em;
+}
+
+.check:checked ~ .menu__hamburguer{
+    background-color: #3D518E;
+    border-radius: 3px;
+}
+
+.check:checked ~ .cabecalho__links{
+    display: block;
+}

@@ -1,0 +1,11 @@
+.caixa__texto{
+    color: #1A274F;
+    font-size: 16px;
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+}
+
+.caixa__texto::placeholder{
+    color: #1A274F;
+}
