@@ -1,28 +1,26 @@
 import './Header.css'
+import Botao from '../Botao'
+import {Link} from 'react-router-dom'
 
 const Header = () => {
     return (
         <header>
             <nav className='cabecalho'>
-                <a href="#">
+                <Link className='' to={"/"}>
                     <img src="src/assets/logo__branco.svg" alt="Logo da 2E" />
-                </a>
+                </Link>
                 <div className='cabecalho__opcoes'>
-                    <a href="#" className='contato'>Contato</a>
+                    <Botao texto="Contato"/>
                     <input type="checkbox" id='menu' className='check'/>
                     <label htmlFor="menu" className='menu__hamburguer'>
                         <img src="src/assets/menu__hamburguer.svg" alt="Menu hamburguer" />
                     </label>
                     <ul className='cabecalho__links'>
                         <li className='cabecalho__item'>
-                            <a href="#" className='cabecalho__link'>
-                                Sobre
-                            </a>
+                            <Link className='cabecalho__link' to={"/sobre"}>Sobre</Link>
                         </li>
                         <li className='cabecalho__item'>
-                            <a href="#" className='cabecalho__link'>
-                                Segurança
-                            </a>
+                            <Link className='cabecalho__link' to={"/seguranca"}>Segurança</Link>
                         </li>
                     </ul>
                 </div>

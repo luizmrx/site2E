@@ -25,6 +25,10 @@
     padding: 1em 2em;
 }
 
+.caixa__titulo{
+    text-align: center;
+}
+
 .caixa__paragrafo{
     font-size: 18px;
 }

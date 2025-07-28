@@ -1,6 +1,6 @@
 import Mensagem from '../Mensagem'
 import './Banner.css'
-import Link from '../Link'
+import Botao from '../Botao'
 
 const Banner = () =>{
     return(
@@ -11,7 +11,7 @@ const Banner = () =>{
                 <div className="luz__verde"></div>
                 <img src="src/assets/celular.svg" alt="Celular demonstrando a facilidade no processo" />
             </div>
-            <Link texto="Comece agora"/>
+            <Botao texto="Comece agora"/>
             <p className='principal__paragrafo'>Plataforma segura, intuitiva e pensada para trazer os melhores descontos na sua conta.</p>
         </main>
     )
