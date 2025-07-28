@@ -1,0 +1,14 @@
+.beneficios{
+    background: linear-gradient(to bottom, #334479, #3C59B5);
+    padding: 2em;
+}
+
+.beneficios__titulo{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 2em;
+}

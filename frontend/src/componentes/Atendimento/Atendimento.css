@@ -1,0 +1,14 @@
+.atendimento{
+    background: linear-gradient(to bottom, #334479, #0F183E);
+    padding: 2em;
+}
+
+.atendimento__titulo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 2em;
+}

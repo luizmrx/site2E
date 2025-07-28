@@ -5,6 +5,16 @@
     box-sizing: border-box;
 }
 
+.container__titulo{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 20px;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
 .caixa{
     background-color: rgba(214, 219, 233, 0.1);
     backdrop-filter: blur(15px);
@@ -30,7 +40,8 @@
 }
 
 .caixa__paragrafo{
-    font-size: 18px;
+    font-size: 16px;
+    white-space: pre-line;
 }
 
 .caixa__imagem{
@@ -44,4 +55,8 @@
 .caixa__descricao{
     font-size: 14px;
     white-space: pre-line; 
+}
+
+.caixa__container__botao{
+    margin: 1em 3em;
 }

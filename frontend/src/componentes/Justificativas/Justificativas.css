@@ -1,0 +1,31 @@
+.justificativas{
+    padding: 2em;
+    background: linear-gradient(to bottom, #0F183E, #3C59B5);
+}
+
+.justificativas__titulo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 20px;
+    color: white;
+}
+
+.justificativas__container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.justificativas__container img{
+    margin-right: 1em;
+}
+
+.justificativas__paragrafo{
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    padding: 1em 0;
+}
