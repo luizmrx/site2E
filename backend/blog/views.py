@@ -1,0 +1,7 @@
+from .models import Artigo
+from rest_framework import viewsets
+from .serializers import ArtigoSerializer
+
+class ArtigoViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = Artigo.objects.all().order_by('-data_publicacao')
+    serializer_class = ArtigoSerializer
