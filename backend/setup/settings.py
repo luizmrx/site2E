@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api',
     'rest_framework',
+    'rest_framework.authtoken',
     'blog',
     'corsheaders',
 ]
@@ -73,7 +74,10 @@ TEMPLATES = [
 ]
 
 REST_FRAMEWORK = {
-    'DATETIME_FORMAT': "%d/%m/%Y %H:%M",
+    # 'DATETIME_FORMAT': "%d/%m/%Y %H:%M",
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    ),
 }
 
 WSGI_APPLICATION = 'setup.wsgi.application'

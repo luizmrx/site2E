@@ -1,5 +1,6 @@
 from rest_framework.views import APIView
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework import status
 from .serializers import LeadSerializer
@@ -14,6 +15,7 @@ class LeadCreateView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def listar_newsletter(request):
     clientes = Lead.objects.all().order_by('-criado_em')
     serializer = LeadSerializer(clientes, many=True)
