@@ -72,6 +72,10 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': "%d/%m/%Y %H:%M",
+}
+
 WSGI_APPLICATION = 'setup.wsgi.application'
 
 
