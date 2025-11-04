@@ -25,10 +25,11 @@ urlpatterns = [
     path('area-restrita/', admin.site.urls),
     path('api/', include('api.urls')),
     path('blog/', include('blog.urls')),
-    re_path(r'^.*$', IndexView.as_view(), name='index'),
-] 
-# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    # re_path(r'^.*$', IndexView.as_view(), name='index'),
+]
+# o Ngnix serve os arquivos estáticos
+#  + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# urlpatterns += [
-#     re_path(r'^.*$', IndexView.as_view(), name='index'),
-# ]
+urlpatterns += [
+    re_path(r'^.*$', IndexView.as_view(), name='index'),
+]
