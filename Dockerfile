@@ -1,34 +1,35 @@
-# Dockerfile
 FROM python:3.12-slim
-
-ENV PYTHONDONTWRITEBYTECODE=1
-ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Instalar dependências do sistema
+# Variáveis de ambiente
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Dependências do sistema (incluindo nginx)
 RUN apt-get update && apt-get install -y \
-    build-essential libpq-dev && \
+    build-essential libpq-dev nginx && \
     rm -rf /var/lib/apt/lists/*
 
-# Instalar requirements.txt
+# Copia requirements
 COPY backend/requirements.txt .
 RUN pip install --upgrade pip
-RUN pip install -r requirements.txt
+RUN pip install -r requirements.txt gunicorn
 
-# Copiar Django
+# Copia Django
 COPY backend/ ./backend
-
-# Copiar React build para staticfiles
 COPY backend/dist/ ./backend/staticfiles/
 
 WORKDIR /app/backend
 
-# Coletar static
+# Coleta static
 RUN python manage.py collectstatic --noinput
 
-EXPOSE 8000
+# Copia configuração do Nginx
+COPY nginx.conf /etc/nginx/sites-enabled/default
 
-# Executar Gunicorn
-CMD ["gunicorn", "setup.wsgi:application", "--bind", "0.0.0.0:8000", "--workers", "3"]
-# CMD ["bash", "-c", "python manage.py collectstatic --noinput && gunicorn setup.wsgi:application --bind 0.0.0.0:8000 --workers 3"]
+# Expõe porta
+EXPOSE 80
+
+# CMD: roda Gunicorn + Nginx
+CMD ["sh", "-c", "gunicorn setup.wsgi:application --bind 127.0.0.1:8000 --workers 3 & nginx -g 'daemon off;'"]
