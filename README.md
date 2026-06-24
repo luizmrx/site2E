@@ -1,4 +1,3 @@
-````md
 # ⭐ Site 2E — Full Stack Platform (Django + React)
 
 ![Django](https://img.shields.io/badge/Django-5.2.4-green?logo=django)
@@ -13,7 +12,7 @@
 
 O Site 2E é uma aplicação full-stack desenvolvida como versão anterior do sistema digital da empresa 2E.
 
-O objetivo da plataforma é centralizar a captação de leads e o gerenciamento de conteúdo com arquitetura desacoplada entre frontend e backend.
+O objetivo da plataforma é centralizar captação de leads e gerenciamento de conteúdo com arquitetura desacoplada.
 
 ---
 
@@ -21,18 +20,19 @@ O objetivo da plataforma é centralizar a captação de leads e o gerenciamento 
 
 Antes da plataforma, o processo era manual e descentralizado.
 
-Com o sistema, foi possível:
+Com o sistema:
 
-- Centralizar leads em um único sistema
-- Automatizar registro de contatos
-- Criar API estruturada para integrações
-- Permitir gerenciamento via Django Admin
+- Centralização de leads
+- Automação de contatos
+- API estruturada
+- Painel Django Admin
 
 ---
 
+
 ## 🏗️ Arquitetura do Sistema
 
-```text id="a9x3m1"
+```text
 Frontend (React + Vite)
         │
         │ HTTP + JWT
@@ -41,6 +41,7 @@ Backend (Django REST Framework)
         │
         ▼
 Database (SQLite / PostgreSQL)
+````
 
 ---
 
@@ -50,10 +51,9 @@ Database (SQLite / PostgreSQL)
 
 * Django 5.2.4
 * Django REST Framework 3.16.0
-* Simple JWT (autenticação)
+* Simple JWT
 * Python 3.12
-* SQLite (desenvolvimento)
-* PostgreSQL (produção recomendado)
+* SQLite / PostgreSQL
 
 ### Frontend
 
@@ -74,16 +74,15 @@ Database (SQLite / PostgreSQL)
 
 ### 📌 Leads
 
-* Cadastro de leads (nome, email, CEP, telefone)
-* CRUD completo via API REST
+* Cadastro de leads
+* CRUD completo via API
 * Registro automático de criação
 
 ### 📝 Blog
 
-* Criação e gestão de artigos
+* Criação de artigos
 * Upload de imagem de capa
 * Paginação de conteúdo
-* Conteúdo estruturado
 
 ---
 
@@ -136,18 +135,11 @@ DELETE /api/blog/artigos/{id}/
 ```bash
 cd backend
 python -m venv venv
-venv\Scripts\activate  # Windows
+venv\Scripts\activate
 
 pip install -r requirements.txt
 python manage.py migrate
-python manage.py createsuperuser
 python manage.py runserver
-```
-
-Acesse:
-
-```
-http://localhost:8000
 ```
 
 ---
@@ -160,25 +152,12 @@ npm install
 npm run dev
 ```
 
-Acesse:
-
-```
-http://localhost:5173
-```
-
 ---
 
 ## 🐳 Docker
 
-### Build
-
 ```bash
 docker build -t site2e .
-```
-
-### Run
-
-```bash
 docker run -p 8000:8000 site2e
 ```
 
@@ -196,10 +175,8 @@ backend/
 
 frontend/
 ├── src/
-│   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   └── main.jsx
+├── App.jsx
+└── main.jsx
 ```
 
 ---
@@ -211,17 +188,6 @@ frontend/
 * Variáveis de ambiente (.env)
 * Senhas criptografadas
 * Controle de DEBUG por ambiente
-
----
-
-## 📦 Variáveis de Ambiente
-
-| Variável             | Descrição                 |
-| -------------------- | ------------------------- |
-| SECRET_KEY           | Chave secreta Django      |
-| DEBUG                | Modo debug                |
-| DJANGO_ALLOWED_HOSTS | Hosts permitidos          |
-| DATABASE_URL         | Banco de dados (produção) |
 
 ---
 
@@ -256,6 +222,3 @@ Projeto proprietário da empresa 2E. Todos os direitos reservados.
 ## 📅 Última atualização
 
 24 de Junho de 2026
-
-```
-```
