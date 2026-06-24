@@ -13,30 +13,34 @@
 
 O Site 2E é uma aplicação full-stack desenvolvida como versão anterior do sistema digital da empresa 2E.
 
-O objetivo da plataforma é centralizar a captação de leads e o gerenciamento de conteúdo, utilizando uma arquitetura desacoplada entre frontend e backend.
+O objetivo da plataforma é centralizar a captação de leads e o gerenciamento de conteúdo com arquitetura desacoplada entre frontend e backend.
 
 ---
 
 ## 🎯 Problema Resolvido
 
-Antes da plataforma, o processo de captação de leads e publicação de conteúdo era manual e descentralizado.
+Antes da plataforma, o processo era manual e descentralizado.
 
 Com o sistema, foi possível:
 
-- Centralizar leads em um único ambiente
-- Automatizar o registro de contatos
-- Criar uma API estruturada para integrações
-- Permitir gerenciamento via painel admin Django
+- Centralizar leads em um único sistema
+- Automatizar registro de contatos
+- Criar API estruturada para integrações
+- Permitir gerenciamento via Django Admin
 
 ---
 
 ## 🏗️ Arquitetura do Sistema
 
-```mermaid
-graph TD
-A[Frontend - React + Vite] --> B[Backend - Django REST API]
-B --> C[Database - SQLite / PostgreSQL]
-````
+```text id="a9x3m1"
+Frontend (React + Vite)
+        │
+        │ HTTP + JWT
+        ▼
+Backend (Django REST Framework)
+        │
+        ▼
+Database (SQLite / PostgreSQL)
 
 ---
 
